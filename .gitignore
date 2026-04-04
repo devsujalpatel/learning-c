@@ -1,0 +1,14 @@
+*.exe
+.vscode 
+.env
+
+# Ignore Windows executables (if you name them that way)
+*.exe
+
+# Ignore Linux default output
+a.out
+*.out
+
+# Ignore object files (intermediate build files)
+*.o
+*.obj
