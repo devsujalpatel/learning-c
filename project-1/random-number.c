@@ -7,17 +7,22 @@ int main() {
 
   int randomNumber = (rand() % 100) + 1;
   int no_of_guesses = 0; 
-  int guessed;
+  int guessed_number;
+
   do {
-  printf("Guess the number");
-    scanf("%d", &guessed);
-    if(guessed>randomNumber) {
+  printf("Guess the number\n");
+    scanf("%d", &guessed_number);
+    if(guessed_number > randomNumber) {
       printf("Lower number please\n");
-    } else {
+    } else if(guessed_number < randomNumber) {
       printf("Higer number please\n");
+    } else {
+      printf("Contrats!!\n");
     }
     no_of_guesses++;
-  } while(guessed != randomNumber);
+  } while(guessed_number != randomNumber);
+  
   printf("You guessed the number in %d guessed", no_of_guesses);
+
   return 0;
 }
